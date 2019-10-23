@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:jsf="http://xmlns.jcp.org/jsf">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Datos Personales</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  </head>
+  <body>
+    <form jsf:prependId="false">
+      <h1>Saludo</h1>
+      <h:messages globalOnly="true"/>
+      <p>
+        <input jsf:id="nombre" type="text" placeholder="Ingresa tu Nombre(s)"
+               jsf:required="true" jsf:value="#{ctrlPersonal.nombre}"/>
+        <h:message for="nombre"/>
+      </p>
+      <p>
+        <input jsf:id="Apellido" type="text" placeholder="Ingresa tu Apellido(s)"
+               jsf:required="true" jsf:value="#{ctrlPersonal.apellido}"/>
+        <h:message for="Apellido"/>
+      </p>
+      <p>
+          <input jsf:id="edad" type="number" placeholder="Ingresa tu año de nacimiento"
+               jsf:required="true" jsf:value="#{ctrlPersonal.edad}"/>
+        <h:message for="edad"/>
+      </p>
+      <p>  
+        <button jsf:action="#{ctrlPersonal.saluda()}">Saludar</button>
+      </p>
+    </form>
+  </body>
+</html>

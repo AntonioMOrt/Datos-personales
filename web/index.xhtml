@@ -11,17 +11,17 @@
     <form jsf:prependId="false">
       <h1>Saludo</h1>
       <h:messages globalOnly="true"/>
-      <p>
+      <p>Nombre(s)
         <input jsf:id="nombre" type="text" placeholder="Ingresa tu Nombre(s)"
                jsf:required="true" jsf:value="#{ctrlPersonal.nombre}"/>
         <h:message for="nombre"/>
       </p>
-      <p>
+      <p>Apellido(s)
         <input jsf:id="Apellido" type="text" placeholder="Ingresa tu Apellido(s)"
                jsf:required="true" jsf:value="#{ctrlPersonal.apellido}"/>
         <h:message for="Apellido"/>
       </p>
-      <p>
+      <p>Año de nacimiento
           <input jsf:id="edad" type="number" placeholder="Ingresa tu año de nacimiento"
                jsf:required="true" jsf:value="#{ctrlPersonal.edad}"/>
         <h:message for="edad"/>

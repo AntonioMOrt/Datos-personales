@@ -8,6 +8,7 @@ import javax.inject.Named;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
+
 /**
  *
  * @author antonio
@@ -51,11 +52,11 @@ public class ctrlPersonal {
     this.nombre = nombre;
   }  
   
-  public void saluda() {
-    final int Resultado = 2019 - getEdad();
-    final String saludo = "Hola " + getNombre() + " " + getApellido() + " su edad es de " + Resultado  + " años ";
+  public void saluda(){      
+        final int Resultado = 2019 - getEdad(); 
+    final String saludo = "Hola " + getNombre() + " " + getApellido() + " su edad es de " + Resultado + " años ";
     
     FacesContext.getCurrentInstance()
         .addMessage(null, new FacesMessage(saludo));
-  }
+  }  
 }
